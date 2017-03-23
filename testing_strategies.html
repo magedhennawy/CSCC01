@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="CSC C01">
+    <meta name="author" content="">
+    <meta property="og:image" content="img/anya.jpg">
+
+    <title>Anya Pls - CSCC01</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/default.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- Preloader -->
+<div id="preloader">
+    <div id="load"></div>
+</div>
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="/news/Maged/CSCC01">
+                <h1>CSCC01</h1>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html#intro">Home</a></li>
+                <li><a href="system-design.html">System Design</a></li>
+                <li><a href="user-stories.html">Project Planning</a></li>
+                <li><a href="agreement.html">Team Agreement</a></li>
+                <li class="active"><a href="testing_strategies.html">Testing Strats</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Section: intro -->
+<section id="intro" class="intro">
+
+    <div class="slogan">
+        <h2>Testing Strategies</h2>
+    </div>
+    <div class="page-scroll">
+        <a href="#agreement" class="btn btn-circle">
+            <i class="fa fa-angle-double-down animated"></i>
+        </a>
+    </div>
+</section>
+<!-- /Section: intro -->
+
+<section id="agreement" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown" data-wow-delay="0.4s">
+                        <div class="section-heading">
+                            <h2>Code Inspection</h2>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+                <hr class="marginbot-50">
+            </div>
+        </div>
+        <h2><a href="#ytplayer">Click here to go to the Code Review Video!</a></h2>
+
+        <h4 style="text-align: left"> Reviewer: Noah <br><br>
+            Code under review: anyapls.js<br><br>
+            (in reference to revision: b59573c6919892a0b4fb8e4fac9b6dfc5ac487e7)<br><br>
+            Review date: 11/23/2015<br><br>
+            Coder under review: Kai Lin<br>
+        </h4>
+        <h5 id="intro">
+            <u>Bugs:</u><br>
+            <ul>
+                <li>
+                    Custom field does not display when browsing by keyboard buttons (up and down arrow button)
+                </li>
+                <li>
+                    Custom field does not display in fullscreen mode
+                </li>
+                <li>
+                    When clicking the same item multiple time, multiple instances of the custom field show up.
+                </li>
+                <li>
+                    Small time lag to display custom field when clicking on an item
+                </li>
+            </ul>
+            <u>Coding style:</u>
+            <ul>
+                <li>
+                    Poor Coding style
+                </li>
+                <li>
+                    Inconsistent use of indentation
+                </li>
+            </ul>
+            <u>Undreadable Code</u>
+            <ul>
+                <li>
+                    “TODOs” left in the code
+                </li>
+                <li>
+                    Poor naming: “flabel” and “vlabel” should be renamed to “fieldLabel” and “valueLabel” respectively and use camel case
+                </li>
+
+            </ul>
+            <u>Code Logic</u>
+            <ul>
+                <li>
+                    Weird return logic: the “if” statement executes states with no return value but the else statement returns a “false”
+                </li>
+            </ul>
+            <u>Documentation</u>
+            <ul>
+                <li>
+                    Comments for itemView function is non-existent
+                </li>
+            </ul>
+        </h5>
+        <h4 style="text-align: left"> Reviewer: Joshua <br><br>
+            Code under review: customform.js<br><br>
+            (in reference to revision: a1edfc70762ca4cc0ec6e33e735e96876985fa52)<br><br>
+            Review date: 11/24/2015<br><br>
+            Coder under review: Noah<br>
+        </h4>
+        <h5 id="intro">
+            <u>Bugs:</u><br>
+            <ul>
+                <li>
+                    Can click on the headers that separate the current items’ fields and the other custom fields or the text that says there are no custom fields and add them as a field
+                    <ul>
+                        <li>
+                            Lines 30, 36, 43, 49
+                        </li>
+                        <li>
+                            fix: set the disabled value of those entries to true after adding them by using the following line
+                        </li>
+                        <li>
+                            displayBox.getItemAtIndex(displayBox.getRowCount()-1).disabled = true;
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <u>Code Logic</u>
+            <ul>
+                <li>
+                    The code logic follows expected result
+                    <ul>
+                        <li>
+                            No repeated, or dead code
+                        </li>
+                        <li>
+                            Code displays the custom field names and values of the selected item and the field values of custom fields that are not associated with the selected item
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <u>Coding style:</u>
+            <ul>
+                <li>
+                    Good coding style
+                    <ul>
+                        <li>
+                            Methods are short
+                        </li>
+                        <li>
+                            Good variable naming
+                        </li>
+                        <li>
+                            Follows language style
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <u>Documentation:</u><br>
+            <ul>
+                <li>
+                    Good amount of documentation
+                </li>
+                <li>
+                    Documentation is squished between code sometimes making it hard to read / follow
+                </li>
+            </ul>
+            <u>Unreadable Code</u>
+            <ul>
+                <li>
+                    Big chunks of coding attempts
+                </li>
+                <li>
+                    TODO’s left in the code
+                </li>
+            </ul>
+            <u>Vulnerabilities in code:</u><br>
+            <ul>
+                <li>
+                    Same problem that is described in bugs
+                </li>
+            </ul>
+            <u>Testing:</u><br>
+            <ul>
+                <li>
+                    No automated testing done
+                </li>
+                <li>
+                    Some manual testing done
+                </li>
+            </ul>
+        </h5>
+
+        <h4 style="text-align: left"> Reviewer: Kai  <br><br>
+            Code under review: anyapls.js (custom field search)<br><br>
+            (in reference to revision:  faf8cf2585897d77baaeb4777423b74ceade3b0b)<br><br>
+            Review date: 11/22/2015<br><br>
+            Coder under review: Joshua<br>
+        </h4>
+        <h5 id="intro">
+            <u>Bugs:</u><br>
+            <ul>
+                <li>
+                    Custom field search not working when the program is on full screen
+                </li>
+                <li>
+                    Search only work for first time and after that it doesn’t search item anymore
+                </li>
+            </ul>
+            <u>Coding style:</u>
+            <ul>
+                <li>
+                    Poor coding style.
+                </li>
+                <li>
+                    var sql_search is too messy and unreadable
+                </li>
+                <li>
+                    var sql_search = "SELECT Distinct itemID FROM customField WHERE fieldName LIKE '%" + input + "%' OR fieldValue LIKE '%" + input + "%'";
+                </li>
+                <li>
+                    Instead sql_search should be declare as "SELECT Distinct itemID FROM customField WHERE fieldName LIKE ? OR fieldValue LIKE ? "
+                </li>
+                <li>
+                    var results = this.DB.query(sql_search, [input,input]);
+                </li>
+            </ul>
+            <u>Documentation:</u><br>
+            <ul>
+                <li>
+                    Each section is commented well
+                </li>
+            </ul>
+            <u>Testing:</u><br>
+            <ul>
+                <li>
+                    Testing well done
+                </li>
+                <li>
+                    Works well.
+                </li>
+            </ul>
+        </h5>
+
+        <h4 style="text-align: left"> Reviewer: Maged <br><br>
+            Code under review: customform.js<br><br>
+            (in reference to revision: 25ab4b45f221f2646d2443efee58446025638913)<br><br>
+            Review date: 11/8/2015<br><br>
+            Coder under review: Joshua<br>
+        </h4>
+        <h5 id="intro">
+            <u>Bugs:</u><br>
+            <ul>
+                <li>
+                    Whole window closes/minimizes after user adds an item due to window.close(); call on line 30.
+                </li>
+                <li>
+                    Fix: replace window.close with (“name_of_dialog”).dialog(“close”); instead.
+                </li>
+            </ul>
+            <u>Coding style:</u>
+            <ul>
+                <li>
+                    Poor coding style
+                </li>
+                <li>
+                    Alerts popping up annoys clients, and developers throughout the testing period.
+                </li>
+                <li>
+                    Location: lines 20, 24, 46
+                </li>
+                <li>
+                    Fix: replace the alert statements with console log messages that mostly developers will look at.
+                </li>
+                <li>
+                    Bad naming conventions, naming a new variable the same name as a field name from the XUL.Causes confusion and might cause bugs later on in the project
+                </li>
+                <li>
+                    Location: lines 18,19,39,40,53,54
+                </li>
+            </ul>
+            <u>Documentation:</u><br>
+            <ul>
+                <li>
+                    No documentation throughout code
+                </li>
+            </ul>
+            <u>Testing:</u><br>
+            <ul>
+                <li>
+                    Very little testing done
+                </li>
+                <li>
+                    All testing done was done manually.
+                </li>
+            </ul>
+        </h5>
+    </div>
+</section>
+
+<section id="planning-game" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown">
+                        <div class="section-heading">
+                            <h3>Code Review Session!</h3>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 small-12 large-centered small-centered columns" style="text-align:center;">
+            <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/Y_u6V13uCZU" frameborder="0" allowfullscreen=""></iframe>
+            <div class="row" style="padding-top:10px;"></div>
+        </div>
+    </div>
+</section>
+
+<section id="Writeup" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown">
+                        <div class="section-heading">
+                            <h3>Ideal Testing Writeup</h3>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="intro" class="writeup" style="text-align: left">
+                <h4>
+                    <b>System Requirements for testing</b><br><br>
+                    Zotero firefox client: Firefox 4.X
+                    SQLite database: refer to <a>http://www2.sqlite.org/sysreq.html</a>
+
+                    <b>Testing Framework</b><br><br>
+                    The testing framework that we will use is called jsUnity.
+                    (reference: <a>https://code.google.com/p/jsunity/</a>
+
+                    <b>What is jsUnity?</b><br><br>
+                    jsUnity is a lightweight JavaScript unit testing framework that is context-agnostic. It doesn't rely on any browser capabilities and therefore can be run inside HTML, ASP, WSH or any other context that uses JavaScript/JScript/ECMAScript.<br><br>
+
+                    <b>Why use jsUnity?</b><br><br>
+                    There are already several unit testing frameworks for JavaScript that are browser-centric. jsUnity aims to just focus on JavaScript as a language that's used beyond the browser context. jsUnity can be used in server-side JavaScript implementations.<br><br>
+                    In regards to our application, jsUnity would play a big role in the interaction with our back-end and database. Automation on functions that evoke changes in database will be our primary focus. Functions such as Zotero_AnyaPls_CustomForm.modify in customform.js where database modification is apparent are our focus of automation. We will run call events that are usually triggered by buttons in the front-end to be automated and then match database changes using database queries to see if the correct changes are made. This simulation will be our attempt on creating a full stack testing environment.<br><br>
+
+                    <b>Test Case Assumptions<br><br>
+                        3.8, 3.9:</b> We assumed that users want to modify the value and not the field key name and that users probably would not have duplicate fields. However, we allow that but on the condition that the duplicates merge on modify.<br><br>
+
+                    <b>The Testing Checklist</b><br><br>
+                    Since we do not have automation technology for our front-end, UI testing would need to be manual. To complete the regression, an organized, systematic checklist is needed for proper completion of testing.<br><br>
+
+                    <b>Risk Assessment</b><br><br>
+                    Upon discovering a bug upon testing, the following procedures need to be executed to create a bug ticket:<br><br>
+                    <ol>
+                        <li>specify to the developer steps to reproduce the bug</li>
+                        <li>discuss the risk assessment with the developer that wrote the code for risk of fixing the bug</li>
+                        <li>indicate the priority of fixing the bug by magnitude of its potential to break the system (indicate priority by critical, high, medium, low)</li>
+                    </ol>
+                    Significance of (2): A fix for a high-risk bug might cause breakage in other parts of the system. Such a fix might require a longer extended regression as other parts of a system would need to be re-tested again to see if there are other bugs in the system. That might be unwanted due to sprint time constraint and therefore might be preferable if the bug ticket be moved to a later sprint.<br><br>
+                    Significance of (3): A critical bug is one that causes a system crash of the software and needs to be fixed immediately and other tasks may have to be put on hold. A low priority bug may be a small UI issue that does little or no effect to the system.<br><br>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="cleintVal" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown">
+                        <div class="section-heading">
+                            <h3>Client Validation</h3>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-align" style="text-align: left"><h4>
+                In addition to our acceptance tests, our plugin for usability was tested with the client and various other candidates such as students, teaching assistants, etc. that may be potential users of the Zotero software.<br><br>
+                To perform such a validation, we will provide them with minimal information on how to interact with the new Zotero features such as custom field, batch tag editing, and custom citation. For example, in regards to custom field editing, we will only tell them that custom field can be achieved by right clicking an item and selecting “Customize Additional Fields.” Afterwards, we will just let them click around and play with the new interface at liberty.<br><br>
+                At an ideal state, we will give them a week or more of usage time and ask for a detailed feedback. We will also conduct studies based on different scenarios, such as using the plugin under the circumstance of writing an essay or making notes while reading a textbook. However, with regards to time constraint on deliverable, we will conduct our findings by giving them a shorter amount of time to use our plugin. Our detailed report will include three separate sections for each feature. Each section will consist of what the user likes or dislikes about the feature, what is the magnitude of their like or dislike about each aspect, and what are some possible solution that they think would solve the specific problem.<br><br>
+                These report would generate important notes of observation such as what UI or system changes need to be made. Also, if a user’s dislike is another user’s like, how will we address the conflict and come up with a compromise in our software. These reports will call for new tasks for ongoing sprints. Afterwards, the cycle of validation process with users may need to happen again for further plugin improvement<br><br>
+            </h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="Testing" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="wow bounceInDown">
+                        <div class="section-heading">
+                            <h3>Acceptance Testing and Unit Testing Strategy</h3>
+                            <i class="fa fa-2x fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chart-align" >
+            <img src="img/1.jpg"><br>
+            <img src="img/2.jpg"><br>
+            <img src="img/3.jpg"><br>
+            <img src="img/4.jpg"><br>
+            <img src="img/5.jpg"><br>
+            <img src="img/6.jpg"><br>
+            <img src="img/7.jpg"><br>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="wow shake" data-wow-delay="0.4s">
+                    <div class="page-scroll marginbot-30">
+                        <a href="#intro" id="totop" class="btn btn-circle">
+                            <i class="fa fa-angle-double-up animated"></i>
+                        </a>
+                    </div>
+                </div>
+                <p>&copy;Copyright 2015 - Anya Pls. All rights reserved. Designed by <a href="http://bootstraptaste.com">Bootstrap Themes</a></p>
+                <!--
+                    All links in the footer should remain intact.
+                    Licenseing information is available at: http://bootstraptaste.com/license/
+                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Squadfree
+                -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Core JavaScript Files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/custom.js"></script>
+<script src="js/lightbox.js"></script>
+
+</body>
+
+</html>
